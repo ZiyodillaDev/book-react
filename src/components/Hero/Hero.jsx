@@ -21,23 +21,22 @@ export default class HeroCarousel extends Component {
           <Slider {...settings}>
             <SimpleDiv className="hero_carousel">
               <h2 className="hero_carousel_title" id="hd">
-                Temuriylar davri adabiyoti
+                Temuriylar <br /> davri adabiyoti
               </h2>
             </SimpleDiv>
             <SimpleDiv className="hero_carousel">
-              <h2 className="hero_carousel_title">Jadid davri adabiyoti</h2>
+              <h2 className="hero_carousel_title">Jadid <br /> davri adabiyoti</h2>
             </SimpleDiv>
             <SimpleDiv className="hero_carousel">
-              <h2 className="hero_carousel_title">Sovet davri adabiyoti</h2>
+              <h2 className="hero_carousel_title">Sovet <br /> davri  adabiyoti</h2>
             </SimpleDiv>
             <SimpleDiv className="hero_carousel">
               <h2 className="hero_carousel_title">
-                Mustaqillik davri adabiyoti
+                Mustaqillik <br /> davri adabiyoti
               </h2>
             </SimpleDiv>
           </Slider>
         </SimpleDiv>
-        {/* <Search /> */}
       </SimpleDiv>
     );
   }

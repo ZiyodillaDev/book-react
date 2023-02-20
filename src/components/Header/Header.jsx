@@ -10,13 +10,13 @@ import {
   HeaderNavLink,
   HeaderSelectbox,
   HeaderOptionSelected,
+  HeaderOptionSelectedImg,
   HeaderOptionSelectedArrowDown,
   HeaderOptionsContainer,
   Option,
   OptionLabel,
   OptionRadio,
   HeaderBtn,
-  ProfileImg,
 } from "./header.style";
 import { useTranslation } from "react-i18next";
 import { lang } from "../../lang/lang";
@@ -38,11 +38,11 @@ export const Header = () => {
       opArrowDown.current.classList.remove("active");
     }
   };
-  const [dataInfo, setDataInfo] = useState({});
+  const [avatarName, setAvatarName] = useState({});
   setTimeout(() => {
     let data = JSON.parse(localStorage.getItem("user"));
     // console.log(data);
-    setDataInfo(data);
+    setAvatarName(data);
   }, 500);
   const handleSelecteds = () => {
     localStorage.removeItem("token");
@@ -55,6 +55,7 @@ export const Header = () => {
         <HeaderNavLogo onClick={handleSelected} to={"/"}>
           {t("header.logo")}
         </HeaderNavLogo>
+        
         <HeaderNavLinks>
           <HeaderNavLink onClick={handleSelected} to={"/"}>
             {t("header.homePage")}
@@ -92,14 +93,14 @@ export const Header = () => {
             <HeaderOptionSelected onClick={(evt) => handleOption(evt)}>
               {/* <HeaderOptionSelectedImg src={userImg} /> */}
               <HeaderBtn>
-                {dataInfo.image != null ? (
-                  <ProfileImg
+                {avatarName.image != null ? (
+                  <img
                     className="profileImg"
-                    src={`http://localhost:5000/${dataInfo.image}`}
+                    src={`http://localhost:5000/${avatarName.image}`}
                     alt="image"
                   />
-                ) : dataInfo.first_name != undefined ? (
-                  dataInfo.first_name.at(0) + "." + dataInfo.last_name.at(0)
+                ) : avatarName.first_name != undefined ? (
+                  avatarName.first_name.at(0) + "." + avatarName.last_name.at(0)
                 ) : (
                   " " + " "
                 )}

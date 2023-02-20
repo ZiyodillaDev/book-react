@@ -4,6 +4,7 @@ import bgLine from '../../assets/images/AlisherNavoiy.png'
 export const SimpleDiv = styled.div``;
 
 export const CarouselBox =styled.div`
+/* width: auto; */
 max-width: 1261.9px;
 height: 346.97px;
 background-image: url(${bgLine});
@@ -12,9 +13,14 @@ background-repeat: no-repeat;
 position: relative;
 `
 export const CarouselBoxHd =styled.div`
+/* width: auto; */
+/* font-family:'Roboto' ; */
+
 `
 
 export const CarouselBoxLineGradienit =styled.div`
+/* width: auto; */
+/* position: absolute; */
 z-index: 10;
 max-width: 1261.9px;
 height: 346.97px;
@@ -46,8 +52,7 @@ border: 1px solid #F5F5F5;
 padding-left: 10px;
 outline: none;
 margin-right: 10px;
-caret-color: var(--main-text-color);
-color: var(--main-text-color);
+
 `
 export const SearchInputBtn =styled.button`
 padding: 12px 37px;

@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export const HeaderContainer = styled.div`
   max-width: 1440px;
   width: 100%;
+  
   padding: 0 100px;
 `;
 
@@ -14,6 +15,7 @@ export const HeaderNav = styled.header`
   position: sticky;
   top: 0;
   padding: 27px 0;
+  z-index: 100;
 `;
 
 export const HeaderNavLogo = styled(NavLink)`
@@ -31,6 +33,7 @@ export const HeaderNavLinks = styled.div`
   display: flex;
   gap: 25px;
   align-items: center;
+ 
 `;
 export const HeaderNavLink = styled(NavLink)`
   font-family: Poppins;
@@ -38,6 +41,7 @@ export const HeaderNavLink = styled(NavLink)`
   color: var( --header-link-text-color);
   position: relative;
   text-decoration: none;
+ 
   &:hover {
     color: var(--header-link-text-color);
   }
@@ -73,6 +77,7 @@ export const HeaderOptionsContainer = styled.div`
   left: -70px;
   display: none;
   flex-direction: column;
+
   background: var( --header-select-link-bg);
   color: var( --header-select-link-text-color);
   max-height: 0;
@@ -80,7 +85,7 @@ export const HeaderOptionsContainer = styled.div`
   transition: all 0.4s;
   border-radius: 8px;
   order: 1;
-  z-index: 99999 !important;
+ 
 
 
   &.active {
@@ -89,7 +94,6 @@ export const HeaderOptionsContainer = styled.div`
     height: 100%;
     opacity: 1;
     display: flex;
-  z-index: 99999 !important;
 
   }
 `;
@@ -108,6 +112,7 @@ export const HeaderOptionSelectedArrowDown = styled.img`
 export const Option = styled(NavLink)`
   padding: 10px 20px;
   cursor: pointer;
+  
   &:hover {
     background: var(--header-select-link-hover-bg);
   }
@@ -121,6 +126,7 @@ export const OptionLabel = styled.label`
 `;
 
 export const OptionRadio = styled.input`
+
   display: none;
 `;
 
@@ -129,8 +135,5 @@ export const HeaderBtn = styled.button`
   height: 49px;
   width: 49px;
   border: 1px solid grey;
+ 
 `;
-
-export const ProfileImg = styled.img`
-object-fit: cover;
-`

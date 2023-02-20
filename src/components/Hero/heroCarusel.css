@@ -1,10 +1,5 @@
 
-.hero_carousel_box {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    z-index: -1;
-}
+
 
 .hero_carousel {
     max-width: 100%;
@@ -14,10 +9,8 @@ background-image: url(../../assets/images/hero.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    z-index: -1;
-}
-ul li button{
-    opacity: 0;
+    z-index: -100;
+
 }
 
 .hero_carousel_title {
@@ -70,6 +63,10 @@ ul .slick-active {
     position: absolute;
     top: 0px;
     left: 0;
+}
+
+ul li button{
+    opacity: 0;
 }
 
 
