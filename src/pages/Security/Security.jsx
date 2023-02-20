@@ -33,10 +33,11 @@ export const Security = () => {
       newPassword: newPasswordRef.current.value,
     });
     const userSetting = async () => {
-      const res = await fetch("http://10.10.3.114:5000/user/secutiry", {
+      const res = await fetch("http://localhost:5000/user/security", {
         method: "PUT",
         headers: {
           Authorization: localStorage.getItem("token"),
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: emailRef.current.value,
@@ -48,6 +49,7 @@ export const Security = () => {
     };
     userSetting();
   };
+
   return (
     <AllSecurity>
       <SecurityTxt>{t("main.recoveryPassword")}</SecurityTxt>
